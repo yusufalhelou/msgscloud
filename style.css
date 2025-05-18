@@ -309,7 +309,7 @@ iframe {
 .cloud-container {
     width: 80%;
     max-width: 600px;
-    background-color: #213d53;
+    background-color: #515151;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
@@ -352,6 +352,6 @@ iframe {
 }
 
 .blue-version:hover {
-    background-color: #2a4d6a;
+    background-color: #616161;
     transform: scale(1.05);
 }
