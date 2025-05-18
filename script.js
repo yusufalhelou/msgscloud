@@ -158,19 +158,27 @@ document.getElementById('toggleCloudButton').addEventListener('click', () => {
     const cloudWindow = document.getElementById('cloudWindow');
     const formContainer = document.getElementById('formContainer');
     
+    // Toggle cloud window
     cloudWindow.classList.toggle('hidden');
+    
+    // Update button text
     document.getElementById('toggleCloudButton').textContent = 
         cloudWindow.classList.contains('hidden') ? 'فتح السحابة' : 'إغلاق السحابة';
     
+    // Control polling - ONLY pause when cloud is open
     if (!cloudWindow.classList.contains('hidden')) {
+        // Close form if open
         if (!formContainer.classList.contains('hidden')) {
             formContainer.classList.add('hidden');
             document.getElementById('toggleFormButton').textContent = 'Open Form';
         }
+        // Pause polling
         isPollingActive = false;
     } else {
-        isPollingActive = true;
-        fetchDataAndUpdate();
+        // Only resume polling if it was active before
+        if (pollingInterval !== null) {
+            isPollingActive = true;
+        }
     }
 });
 
