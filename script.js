@@ -140,7 +140,7 @@ document.getElementById('toggleFormButton').addEventListener('click', () => {
         document.getElementById('toggleFormButton').textContent = 'Close Form';
         if (!cloudWindow.classList.contains('hidden')) {
             cloudWindow.classList.add('hidden');
-            document.getElementById('toggleCloudButton').textContent = 'فتح السحابة';
+            document.getElementById('toggleCloudButton').textContent = 'Enter The Cloud';
         }
         isPollingActive = false;
     } else {
@@ -163,7 +163,7 @@ document.getElementById('toggleCloudButton').addEventListener('click', () => {
     
     // Update button text
     document.getElementById('toggleCloudButton').textContent = 
-        cloudWindow.classList.contains('hidden') ? 'فتح السحابة' : 'إغلاق السحابة';
+        cloudWindow.classList.contains('hidden') ? 'Exit The Cloud' : 'Enter The Cloud';
     
     // Control polling - ONLY pause when cloud is open
     if (!cloudWindow.classList.contains('hidden')) {
