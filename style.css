@@ -335,15 +335,23 @@ iframe {
 
 /* Cloud Button Styling */
 .blue-version {
-    background-color: #213d53 !important;
-    border: 2px solid #fee4cf !important; /* Add border like messages button */
-    display: block !important;
+    background-color: #213d53;
+    padding: 12px 25px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.1em;
+    margin: 20px auto;
+    display: block;
+    transform: scale(1.05);
+
     width: fit-content;
-    margin: 15px auto !important; /* Center button */
-    transition: all 0.2s !important;
+    transition: all 0.2s;
 }
 
 .blue-version:hover {
-    background-color: #2a4d6a !important;
-    transform: scale(1.05) !important;
+    background-color: #2a4d6a;
+    transform: scale(1.05);
 }
