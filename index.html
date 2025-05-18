@@ -15,6 +15,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -36,9 +37,11 @@
     </div>
     
     <h1>☁️ السحابة</h1>
-    <button id="toggleCloudButton" class="load-messages-button blue-version">فتح السحابة</button>
-    <div id="cloudContainer" class="hidden">
-        <iframe src="https://51pharmd.github.io/cloud" width="500" height="500" frameborder="0" style="border-radius: 10px;" allowfullscreen></iframe>
+    <div class="cloud-container">
+        <button id="toggleCloudButton" class="load-messages-button blue-version">فتح السحابة</button>
+        <div id="cloudWindow" class="hidden">
+            <iframe src="https://51pharmd.github.io/cloud" class="cloud-iframe"></iframe>
+        </div>
     </div>
     
     <!-- Scroll down button -->
@@ -47,6 +50,6 @@
     <!-- Target element to scroll to -->
     <div id="bottom-of-page"></div>
 
-    <script src="script.js?t=<?=time()?>"></script>
+    <script src="script.js"></script>
 </body>
 </html>
