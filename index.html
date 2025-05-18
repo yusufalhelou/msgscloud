@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To 51</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+        /* .lanterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://raw.githubusercontent.com/yusufalhelou/msgs/main/51lanterns.png');
+            background-repeat: repeat-x;
+            z-index: 10;
+            animation: floatLanterns 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+        @keyframes floatLanterns {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        } */
+    </style>
+</head>
+<body>
+    <div class="decoration"></div>
+    <div class="lanterns"></div>
+    <div class="colorful-paper"></div>
+    <h1>✍ ...51 إلى</h1>
+    <button id="toggleFormButton">Open Form</button>
+    <p class="note">All messages are anonymous. We do not collect any data.</p>
+    <div id="formContainer" class="hidden">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczuoHKZWbw0_n8hi9e0qGJogc2Xc64RrAuPJb-32KGS4tvqw/viewform?usp=header&hl=en" width="500" height="500" frameborder="0" margin-left: auto; margin-right: auto marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    
+    <h1>💌 الرسائل</h1>
+    <p class="note">Messages may take up to 5 min to appear.</p>
+    <div id="chat-container" class="chat-container">
+        <button id="loadMessagesBtn" class="load-messages-button">عرض الرسائل</button>
+    </div>
+    
+    <!-- Scroll down button -->
+    <button id="scrollToBottomButton" class="scroll-button">📩</button>
+
+    <!-- Target element to scroll to -->
+    <div id="bottom-of-page"></div>
+
+    <script src="script.js?t=<?=time()?>"></script>
+</body>
+</html>
