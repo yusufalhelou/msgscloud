@@ -16,23 +16,6 @@
             padding: 0;
             font-family: 'Cairo', sans-serif;
         }
-        /* .lanterns {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://raw.githubusercontent.com/yusufalhelou/msgs/main/51lanterns.png');
-            background-repeat: repeat-x;
-            z-index: 10;
-            animation: floatLanterns 4s ease-in-out infinite;
-            pointer-events: none;
-        }
-        @keyframes floatLanterns {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        } */
     </style>
 </head>
 <body>
@@ -50,6 +33,12 @@
     <p class="note">Messages may take up to 5 min to appear.</p>
     <div id="chat-container" class="chat-container">
         <button id="loadMessagesBtn" class="load-messages-button">عرض الرسائل</button>
+    </div>
+    
+    <h1>☁️ السحابة</h1>
+    <button id="toggleCloudButton" class="load-messages-button blue-version">فتح السحابة</button>
+    <div id="cloudContainer" class="hidden">
+        <iframe src="https://51pharmd.github.io/cloud" width="500" height="500" frameborder="0" style="border-radius: 10px;" allowfullscreen></iframe>
     </div>
     
     <!-- Scroll down button -->
