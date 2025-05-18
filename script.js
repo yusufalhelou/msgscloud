@@ -152,9 +152,17 @@ document.getElementById('loadMessagesBtn').addEventListener('click', function() 
 // Toggle form visibility (updated)
 document.getElementById('toggleFormButton').addEventListener('click', () => {
     const formContainer = document.getElementById('formContainer');
+    const cloudContainer = document.getElementById('cloudContainer');
+    
     if (formContainer.classList.contains('hidden')) {
         formContainer.classList.remove('hidden');
         document.getElementById('toggleFormButton').textContent = 'Close Form';
+        
+        // Close cloud container if open
+        if (!cloudContainer.classList.contains('hidden')) {
+            cloudContainer.classList.add('hidden');
+            document.getElementById('toggleCloudButton').textContent = 'فتح السحابة';
+        }
         
         // Pause polling only if it was active
         if (isPollingActive) {
@@ -168,7 +176,37 @@ document.getElementById('toggleFormButton').addEventListener('click', () => {
         if (pollingInterval !== null) {
             isPollingActive = true;
             fetchDataAndUpdate(); // Immediately fetch data when resuming
+        }
+    }
+});
 
+// Toggle cloud container
+document.getElementById('toggleCloudButton').addEventListener('click', () => {
+    const cloudContainer = document.getElementById('cloudContainer');
+    const formContainer = document.getElementById('formContainer');
+    
+    if (cloudContainer.classList.contains('hidden')) {
+        cloudContainer.classList.remove('hidden');
+        document.getElementById('toggleCloudButton').textContent = 'إغلاق السحابة';
+        
+        // Close form container if open
+        if (!formContainer.classList.contains('hidden')) {
+            formContainer.classList.add('hidden');
+            document.getElementById('toggleFormButton').textContent = 'Open Form';
+        }
+        
+        // Pause polling if active
+        if (isPollingActive) {
+            isPollingActive = false;
+        }
+    } else {
+        cloudContainer.classList.add('hidden');
+        document.getElementById('toggleCloudButton').textContent = 'فتح السحابة';
+        
+        // Resume polling if was active
+        if (pollingInterval !== null) {
+            isPollingActive = true;
+            fetchDataAndUpdate();
         }
     }
 });
