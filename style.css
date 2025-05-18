@@ -329,6 +329,35 @@ iframe {
 }
 */
 
+/* Blue container */
+#cloudContainer {
+    width: 80%;
+    max-width: 600px;
+    background-color: #213d53;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#cloudContainer iframe {
+    width: 500px;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    background: white;
+}
+
+.blue-version {
+    background-color: #213d53 !important;
+}
+
+.blue-version:hover {
+    background-color: #2a4d6a !important;
+}
 
 #bottom-of-page {
     height: 50px; /* Just to ensure it is visible */
