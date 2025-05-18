@@ -163,7 +163,7 @@ document.getElementById('toggleCloudButton').addEventListener('click', () => {
     
     // Update button text
     document.getElementById('toggleCloudButton').textContent = 
-        cloudWindow.classList.contains('hidden') ? 'Exit The Cloud' : 'Enter The Cloud';
+        cloudWindow.classList.contains('hidden') ? 'Enter The Cloud' : 'Exit The Cloud';
     
     // Control polling - ONLY pause when cloud is open
     if (!cloudWindow.classList.contains('hidden')) {
